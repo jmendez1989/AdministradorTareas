@@ -139,6 +139,19 @@ Notificaciones de Cambio: Se utiliza INotifyPropertyChanged para reflejar cambio
 
 Separación de Lógica: La lógica de negocio y la interfaz están claramente diferenciadas. 
 
+El scrit para la base de datos es el siguiente:
+
+CREATE TABLE TAREAS (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Descripcion TEXT NOT NULL,
+    Usuario TEXT NOT NULL,
+    Estado TEXT NOT NULL CHECK(Estado IN ('Pendiente', 'En Proceso', 'Completada')),
+    Prioridad TEXT NOT NULL CHECK(Prioridad IN ('Alta', 'Media', 'Baja')),
+    FechaCompromiso DATE NOT NULL,
+    Notas TEXT,
+    FechaCreacion DATE DEFAULT (datetime('now'))
+);
+
  
 
  
