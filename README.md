@@ -70,7 +70,7 @@ Elegido por su ligereza y eficiencia en la ejecución de consultas SQL.
 
 Proporciona flexibilidad al manejar consultas personalizadas. 
 
-Windows Forms como tecnología de UI: 
+Windows Forms como tecnología de Interface de Usurio: 
 
 Tecnología madura y adecuada para aplicaciones de escritorio. 
 
@@ -92,13 +92,13 @@ Guía de Estilo de Código
 
 Convenciones de Nombres 
 
-Clases: PascalCase (e.g., TareaLogica, AdminTareasFormEditable). 
+Clases: PascalCase (TareaLogica, AdminTareasFormEditable). 
 
-Propiedades y Métodos Públicos: PascalCase (e.g., Id, AgregarTarea). 
+Propiedades y Métodos Públicos: PascalCase (Id, AgregarTarea). 
 
-Variables Privadas: _camelCase (e.g., _id, _descripcion). 
+Variables Privadas: _camelCase (_id, _descripcion). 
 
-Parámetros: camelCase (e.g., fechaInicio, usuario). 
+Parámetros: camelCase (fechaInicio, usuario). 
 
  
 
