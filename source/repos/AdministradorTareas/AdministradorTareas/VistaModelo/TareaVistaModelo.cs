@@ -82,6 +82,11 @@ namespace AdministradorTareas.VistaModelo
                 MessageBox.Show("Ya existe una tarea con la misma descripción para este usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            if (tarea.FechaCompromiso < DateTime.Today)
+            {
+                MessageBox.Show("La fecha de compromiso no puede ser menor a la fecha actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
 
             return true;
         }
