@@ -98,8 +98,8 @@ namespace AdministradorTareas
                 return;
             }
 
-            var confirmResult = MessageBox.Show("¿Estás seguro que deseas eliminar esta tarea?",
-                "Confirmar eliminación", MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show("Â¿EstÃ¡s seguro que deseas eliminar esta tarea?",
+                "Confirmar eliminaciÃ³n", MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
@@ -150,6 +150,13 @@ namespace AdministradorTareas
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrio un error al Limpiar los filtros: {ex.Message}", "Administrador de Tareas");
+            }
+        }
+        private void dataGridViewTareas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridViewTareas.Rows[e.RowIndex].Selected = true;
             }
         }
         #endregion
