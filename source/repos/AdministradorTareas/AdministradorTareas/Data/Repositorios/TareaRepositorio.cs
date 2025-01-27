@@ -1,4 +1,4 @@
-﻿using AdministradorTareas.Data.Servicios;
+using AdministradorTareas.Data.Servicios;
 using Dapper;
 using System;
 using System.Collections.Generic;
@@ -9,16 +9,19 @@ namespace AdministradorTareas.Data.Repositorios
 {
     public class TareaRepositorio
     {
+        // Instancia única de la clase para implementar el patrón Singleton
         private static readonly Lazy<TareaRepositorio> _instancia = new(() => new TareaRepositorio());
-
         private const string ConnectionString = "Data Source=Admtareas.db;Version=3;";
 
-        public TareaRepositorio() 
-        { 
+        // Constructor privado para prevenir instanciación externa
+        public TareaRepositorio()
+        {
         }
 
+        // Propiedad que expone la instancia única de la clase
         public static TareaRepositorio Instancia => _instancia.Value;
 
+        // Obtiene la lista de tareas ordenadas por fecha de compromiso
         public List<Tarea> ListaTareas()
         {
             try
@@ -35,6 +38,7 @@ namespace AdministradorTareas.Data.Repositorios
             }
         }
 
+        // Agrega una nueva tarea a la base de datos
         public void AgregarTarea(Tarea tarea)
         {
             try
@@ -54,6 +58,7 @@ namespace AdministradorTareas.Data.Repositorios
             }
         }
 
+        // Actualiza los datos de una tarea existente en la base de datos
         public void ActualizarTarea(Tarea tarea)
         {
             try
@@ -77,6 +82,7 @@ namespace AdministradorTareas.Data.Repositorios
             }
         }
 
+        // Elimina una tarea de la base de datos según su ID
         public void EliminarTarea(int id)
         {
             try
