@@ -21,6 +21,7 @@ namespace AdministradorTareas
             _tareaVistaModelo = new TareaVistaModelo();
             MostrarTareas();
             LoadDropdowns();
+            dataGridViewTareas.CellClick += dataGridViewTareas_CellClick;
         }
         #endregion
 
@@ -153,5 +154,13 @@ namespace AdministradorTareas
             }
         }
         #endregion
+
+        private void dataGridViewTareas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridViewTareas.Rows[e.RowIndex].Selected = true;
+            }
+        }
     }
 }

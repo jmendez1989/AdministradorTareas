@@ -52,6 +52,7 @@
             this.dataGridViewTareas.ReadOnly = true;
             this.dataGridViewTareas.Size = new System.Drawing.Size(947, 404);
             this.dataGridViewTareas.TabIndex = 0;
+            this.dataGridViewTareas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTareas_CellClick);
             // 
             // btnAgregar
             // 
