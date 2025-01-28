@@ -33,3 +33,4 @@ C:\Users\Miguel\source\repos\AdministradorTareas\AdministradorTareas\obj\Debug\n
 C:\Users\Miguel\source\repos\AdministradorTareas\AdministradorTareas\obj\Debug\net6.0-windows\AdministradorTareas.TablaAdminTareas.resources
 C:\Users\Miguel\source\repos\AdministradorTareas\AdministradorTareas\bin\Debug\net6.0-windows\Admtareas.db
 C:\Users\Miguel\source\repos\AdministradorTareas\AdministradorTareas\obj\Debug\net6.0-windows\AdministradorTareas.AdminTareasFormEditable.resources
+C:\Users\Miguel\source\repos\AdministradorTareas\AdministradorTareas\bin\Debug\net6.0-windows\AdministradorTareas.dll.config

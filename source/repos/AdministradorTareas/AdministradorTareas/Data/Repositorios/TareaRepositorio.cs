@@ -11,7 +11,7 @@ namespace AdministradorTareas.Data.Repositorios
     {
         // Instancia única de la clase para implementar el patrón Singleton
         private static readonly Lazy<TareaRepositorio> _instancia = new(() => new TareaRepositorio());
-        private const string ConnectionString = "Data Source=Admtareas.db;Version=3;";
+        private static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         // Constructor privado para prevenir instanciación externa
         public TareaRepositorio()

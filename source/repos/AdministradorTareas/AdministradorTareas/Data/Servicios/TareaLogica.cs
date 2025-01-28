@@ -1,6 +1,7 @@
 using Dapper;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SQLite;
 
 namespace AdministradorTareas.Data.Servicios
@@ -9,7 +10,7 @@ namespace AdministradorTareas.Data.Servicios
     {
         // Implementación del patrón Singleton para garantizar una única instancia de la clase
         private static readonly Lazy<TareaLogica> _instancia = new(() => new TareaLogica());
-        private const string ConnectionString = "Data Source=Admtareas.db;Version=3;";
+        private static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         // Constructor privado para prevenir la instanciación externa
         public TareaLogica() 
