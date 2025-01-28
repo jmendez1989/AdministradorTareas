@@ -1,4 +1,4 @@
-﻿namespace AdministradorTareas
+namespace AdministradorTareas
 {
     partial class TablaAdminTareas
     {
@@ -23,7 +23,7 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-               private void InitializeComponent()
+        private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewTareas = new System.Windows.Forms.DataGridView();
